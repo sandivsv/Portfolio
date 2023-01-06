@@ -23,14 +23,17 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu">
+        {/* menu button  */}
         <HiMenuAlt4 onClick={() => setToggle(true)} />
-
+        {/* if menu button clicked then  */}
+        
         {toggle && (
           <motion.div
                 whileInView={{ x: [300, 0] }}
                 transition={{ duration: 0.85, ease: 'easeOut' }}
             >
-                <HiX onClick={() => setToggle(false)} />
+                {/* cross button */}
+                <HiX onClick={() => setToggle(false)} /> 
                 <ul>
                 {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                     <li key={item}>
